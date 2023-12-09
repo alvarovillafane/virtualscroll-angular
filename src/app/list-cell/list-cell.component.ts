@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-list-cell',
@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   imports: [],
   templateUrl: './list-cell.component.html',
   styleUrl: './list-cell.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ListCellComponent {
   @Input() cell: any;

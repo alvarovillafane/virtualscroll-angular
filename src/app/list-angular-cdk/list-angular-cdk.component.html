@@ -1,0 +1,9 @@
+<cdk-virtual-scroll-viewport
+  itemSize="65"
+  (scrolledIndexChange)="fetchMore($event)"
+>
+  <app-list-row [row]="row" *cdkVirtualFor="let row of listRows">
+  </app-list-row>
+</cdk-virtual-scroll-viewport>
+
+<div *ngIf="loading" class="loader">Loading...</div>

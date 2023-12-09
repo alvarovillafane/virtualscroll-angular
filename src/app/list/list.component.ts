@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MockDataService } from '../mock-data.service';
 import { ListRowComponent } from '../list-row/list-row.component';
 import { CommonModule } from '@angular/common';
@@ -13,13 +13,17 @@ import { CommonModule } from '@angular/common';
 export class ListComponent {
   listRows: any;
   loading = true;
+  numColumns = 100;
+  numRows = 100;
 
   constructor(private readonly mockDataService: MockDataService) {}
 
   ngOnInit(): void {
-    this.mockDataService.generateMockData(20).subscribe((data: any) => {
-      this.listRows = data;
-      this.loading = false;
-    });
+    this.mockDataService
+      .generateMockData(this.numRows, this.numColumns)
+      .subscribe((data: any) => {
+        this.listRows = [...data];
+        this.loading = false;
+      });
   }
 }

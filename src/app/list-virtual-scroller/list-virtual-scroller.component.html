@@ -1,0 +1,14 @@
+<virtual-scroller
+  #scroll
+  [items]="listRows"
+  [scrollAnimationTime]="0"
+  (vsEnd)="fetchMore($event)"
+  [enableUnequalChildrenSizes]="true"
+>
+  <app-list-row-virtual-scroller
+    [row]="item"
+    [parentScroll]="parentScroll"
+    *ngFor="let item of scroll.viewPortItems; trackBy: myTrackByFunction"
+  ></app-list-row-virtual-scroller>
+  <div *ngIf="loading" class="loader">Loading...</div>
+</virtual-scroller>

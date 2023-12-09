@@ -1,7 +1,11 @@
-<header>Header</header>
+<header>
+  <a [routerLink]="['/list']">List</a>
+  <a [routerLink]="['/list-virtual-scroller']">List Virtual Scroller</a>
+  <a [routerLink]="['/list-cdk']">List CDK</a>
+</header>
 <main>
   <div class="left-content"></div>
   <div class="right-content">
-    <app-list></app-list>
+    <router-outlet></router-outlet>
   </div>
 </main>

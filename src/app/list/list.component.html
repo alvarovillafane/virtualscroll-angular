@@ -1,3 +1,2 @@
-<p>list works!</p>
-
-<app-list-row [row]="row" *ngFor="let row of listRows"></app-list-row>
+<app-list-row [row]="item" *ngFor="let item of listRows"></app-list-row>
+<div *ngIf="loading" class="loader">Loading...</div>
