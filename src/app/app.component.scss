@@ -1,0 +1,30 @@
+header {
+  height: 50px;
+  background-color: purple;
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+.left-content {
+  height: 100vh;
+  width: 250px;
+  background-color: aqua;
+  position: fixed;
+}
+
+.right-content {
+  flex: 1;
+  background-color: #f2f2f2;
+  margin-left: 250px;
+  margin-top: 50px;
+}
