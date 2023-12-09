@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { of, delay } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class MockDataService {
   constructor() {}
 
-  generateMockData(numRows = 1000, numColumns = 100): any[] {
+  generateMockData(numRows = 1000, numColumns = 100): any {
     const mockData: any[] = [];
 
     for (let i = 0; i < numRows; i++) {
@@ -18,7 +19,7 @@ export class MockDataService {
       mockData.push(row);
     }
 
-    return mockData;
+    return of(mockData).pipe(delay(1000));
   }
 
   private generateRandomString(): string {

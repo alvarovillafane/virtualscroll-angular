@@ -12,10 +12,14 @@ import { CommonModule } from '@angular/common';
 })
 export class ListComponent {
   listRows: any;
+  loading = true;
 
   constructor(private readonly mockDataService: MockDataService) {}
 
   ngOnInit(): void {
-    this.listRows = this.mockDataService.generateMockData(20);
+    this.mockDataService.generateMockData(20).subscribe((data: any) => {
+      this.listRows = data;
+      this.loading = false;
+    });
   }
 }
