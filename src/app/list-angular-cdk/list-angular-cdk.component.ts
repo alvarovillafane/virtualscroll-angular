@@ -26,7 +26,7 @@ export class ListAngularCdkComponent {
   listRows: any;
   loading = true;
   numColumns = 100;
-  numRows = 1000;
+  numRows = 100;
   @ViewChild(CdkVirtualScrollViewport)
   viewport!: CdkVirtualScrollViewport;
 

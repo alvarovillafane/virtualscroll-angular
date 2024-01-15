@@ -13,4 +13,8 @@ import { VirtualScrollerModule } from '@iharbeck/ngx-virtual-scroller';
 export class ListRowVirtualScrollerComponent {
   @Input() row: Array<any> = [];
   @Input() parentScroll: any;
+
+  ngOnInit() {
+    // console.log(this.parentScroll);
+  }
 }

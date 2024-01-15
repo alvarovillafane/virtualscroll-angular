@@ -8,8 +8,14 @@
 - Good candidate, easy to implement
 - Support infinite scroll
 - Only virtual scroll in one direction (vertically)
+- Not so sure about support
 
 ## CDK virtual scroller
+
+- Seems ok, better performance than virtual scroll
+- Support for variable height is experimental
+- If we go this route, we should have fixed height?
+- Better support
 
 ## CDK table?
 

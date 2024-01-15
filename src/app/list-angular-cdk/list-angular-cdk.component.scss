@@ -3,6 +3,10 @@ cdk-virtual-scroll-viewport {
   height: calc(100vh - 50px);
 }
 
+.biggerRow {
+  height: 250px;
+}
+
 // // Bonus points
 // &::-webkit-scrollbar {
 //   width: 1em;

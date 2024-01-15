@@ -1,8 +1,12 @@
 <cdk-virtual-scroll-viewport
-  itemSize="65"
+  itemSize="74"
   (scrolledIndexChange)="fetchMore($event)"
 >
-  <app-list-row [row]="row" *cdkVirtualFor="let row of listRows">
+  <app-list-row
+    [class.biggerRow]="i === 4"
+    [row]="row"
+    *cdkVirtualFor="let row of listRows; index as i"
+  >
   </app-list-row>
 </cdk-virtual-scroll-viewport>
 

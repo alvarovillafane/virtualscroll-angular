@@ -23,9 +23,10 @@ import { ListRowVirtualScrollerComponent } from '../list-row-virtual-scroller/li
 export class ListVirtualScrollerComponent {
   listRows: any;
   loading = true;
-  numColumns = 30;
-  numRows = 1000;
+  numColumns = 50;
+  numRows = 50;
   parentScroll!: ElementRef;
+  refresh = () => {};
 
   constructor(
     private readonly mockDataService: MockDataService,

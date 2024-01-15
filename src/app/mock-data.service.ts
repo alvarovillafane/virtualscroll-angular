@@ -14,7 +14,9 @@ export class MockDataService {
       const row: any[] = [];
       for (let j = 0; j < numColumns; j++) {
         const randomString = this.generateRandomString();
-        row.push({ value: randomString });
+        const type = j % 2 ? 'text' : 'text';
+
+        row.push({ value: randomString, type, index: j });
       }
       mockData.push(row);
     }

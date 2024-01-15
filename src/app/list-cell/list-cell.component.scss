@@ -8,3 +8,9 @@
     border-right: none;
   }
 }
+
+input {
+  &.background {
+    background-color: blue;
+  }
+}

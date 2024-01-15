@@ -1,12 +1,1 @@
-<!-- <virtual-scroller
-  #scroll
-  [items]="row"
-  [horizontal]="true"
-  [parentScroll]="parentScroll.nativeElement"
->
-  <app-list-cell
-    [cell]="item"
-    *ngFor="let item of scroll.viewPortItems"
-  ></app-list-cell>
-</virtual-scroller> -->
 <app-list-cell [cell]="cell" *ngFor="let cell of row"></app-list-cell>

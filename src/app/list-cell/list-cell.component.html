@@ -1,1 +1,15 @@
-<input type="text" [value]="cell.value" />
+<p *ngIf="cell.type === 'text'">{{ cell.value }}</p>
+<!-- <input
+  *ngIf="cell.type === 'text'"
+  [class.background]="bgClass"
+  type="text"
+  [(ngModel)]="cell.value"
+/> -->
+
+<mat-form-field *ngIf="cell.type === 'datepicker'">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker" />
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
