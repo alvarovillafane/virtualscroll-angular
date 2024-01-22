@@ -1,10 +1,19 @@
+rx-virtual-scroll-viewport,
 cdk-virtual-scroll-viewport {
   width: 100%;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 170px);
 }
 
 .biggerRow {
   height: 250px;
+}
+
+main {
+  overflow: hidden;
+}
+
+.loader {
+  position: relative;
 }
 
 // // Bonus points

@@ -16,12 +16,12 @@ export class MockDataService {
         const randomString = this.generateRandomString();
         const type = j % 2 ? 'text' : 'text';
 
-        row.push({ value: randomString, type, index: j });
+        row.push({ value: `${i}-${j}-${randomString}`, type, index: j });
       }
       mockData.push(row);
     }
 
-    return of(mockData).pipe(delay(1000));
+    return of(mockData).pipe(delay(500));
   }
 
   private generateRandomString(): string {

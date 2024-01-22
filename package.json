@@ -21,6 +21,9 @@
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
     "@iharbeck/ngx-virtual-scroller": "^17.0.0",
+    "@rx-angular/cdk": "latest",
+    "@rx-angular/template": "latest",
+    "lodash-es": "^4.17.21",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
